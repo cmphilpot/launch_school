@@ -1,0 +1,11 @@
+{
+    "en": {
+        "welcome": "Welcome to Calculator! Enter your name:"
+    },
+    "es": {
+        "welcome": "Bienvenidos a la calculadora! Entre su nombre"
+    },
+    "ru": {
+        "welcome": "Добро пожаловать! Пишите Ваше имя."
+    }
+  }
