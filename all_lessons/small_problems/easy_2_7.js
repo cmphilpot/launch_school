@@ -17,6 +17,26 @@
 // looking for a boolean result instead of a
 // truthy/falsy value as returned by || and &&.
 
+// WRONG
+// function xor(arg1, arg2) {
+// if((arg1 == true) && (arg2 == true))
+//   return false
+// if((arg1 == false) && (arg2 == false))
+//   return false
+// if((arg1 == true) && (arg2 == false))
+//   return true
+// if((arg1 == false) && (arg2 == true))
+// return true
+// }
+
+//returns true if exactly one of its arguments is truthy,
+
+function xor(value1, value2) {
+  if x {
+    return true;
+  }
+  return false;
+}
 
 console.log(xor(5, 0) === true);          // true
 console.log(xor(false, true) === true);   // true

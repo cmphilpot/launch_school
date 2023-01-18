@@ -8,16 +8,22 @@
 // characters collapsed into a
 // single character.
 
+// use index & length
 
-(str)
-.pop
-.shift
-if ([i] === [i]) {
-  char. / delete?
+function crunch(word) {
+
 }
 
-crunch('ddaaiillyy ddoouubbllee');    // "daily double"
-crunch('4444abcabccba');              // "4abcabcba"
-crunch('ggggggggggggggg');            // "g"
-crunch('a');                          // "a"
-crunch('');                           // ""
+
+console.log(crunch('ddaaiillyy ddoouubbllee'));    // "daily double"
+console.log(crunch('4444abcabccba'));              // "4abcabcba"
+console.log(crunch('ggggggggggggggg'));            // "g"
+console.log(crunch('a'));                          // "a"
+console.log(crunch(''));                           // ""
+
+// (str)
+// .pop
+// .shift
+// if ([i] === [i]) {
+//   char. / delete?
+// }

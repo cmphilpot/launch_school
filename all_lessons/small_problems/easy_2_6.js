@@ -8,6 +8,10 @@
 // You may assume that the input String
 // will always contain at least two words.
 
-function def(str) {
-
+function penultimate(string) {
+wordsArray = string.split("" ");
+return wordsArray[ ];
 }
+
+console.log(penultimate("last word")); // logs true
+console.log(penultimate("Launch School is great!") === "is"); // logs true

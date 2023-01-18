@@ -9,7 +9,9 @@ console.log("What is the tip percentage?");
 let tipPercentage = readlineSync.prompt();
 
 let tip = (tipPercentage * .01) * billAmount;
-let total = billAmount + tip;    /// string!! ********
+
+let total = Number(billAmount) + Number(tip);    /// string!! ********
+
 
 console.log(`The tip is $${tip}`);
 console.log(`The total is $${total}`);
