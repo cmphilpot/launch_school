@@ -4,6 +4,17 @@
 
 // You may not use Array.prototype.reverse().
 
+function reverse(list) {
+  let listCopy = list.slice(0, list.length);
+  list.length = 0;
+
+  for (idx = 0; idx < listCopy.length; idx++) {
+    list.unshift(listCopy[idx]);
+  }
+  return list;
+}
+
+
 let list = [1, 2, 3, 4];
 let result = reverse(list);
 console.log(result); // logs [4,3,2,1]
@@ -23,3 +34,24 @@ let list3 = [];
 let result3 = reverse(list3);
 console.log(result3); // logs []
 console.log(list3 === result3); // logs true
+
+/*
+1st attempt:
+
+returns 2 lists:
+
+function reverse(list) {
+  let goBetween = [];
+
+  for (idx = 0; idx < list.length; idx++) {
+    goBetween.push(list[idx]);
+  }
+
+  for (idx = 0; idx < goBetween.length; idx++) {
+    list.unshift(goBetween[idx]);
+  }
+  return list;
+}
+
+  for (idx = 0; idx < list.length; idx++)
+*/

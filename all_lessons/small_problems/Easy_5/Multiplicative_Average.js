@@ -4,5 +4,20 @@
 
 // Examples:
 
-multiplicativeAverage([3, 5]);                   // "7.500"
-multiplicativeAverage([2, 5, 7, 11, 13, 17]);    // "28361.667"
+/*
+input = array
+output = number.toFixed(3)
+
+.reduce
+*/
+
+function multiplicativeAverage(array) {
+result = array.reduce(function(a, b) {
+  return a *= b;
+  });
+
+  return (result / array.length).toFixed(3);
+}
+
+console.log(multiplicativeAverage([3, 5]));                   // "7.500"
+console.log(multiplicativeAverage([2, 5, 7, 11, 13, 17]));    // "28361.667"

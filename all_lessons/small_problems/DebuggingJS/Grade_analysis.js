@@ -1,7 +1,3 @@
-
-
-
-
 function average(nums) {
   let sum = nums.reduce((total, num) => total + num);
 
@@ -9,10 +5,11 @@ function average(nums) {
 }
 
 function median(nums) {
-  nums.sort();
-
   let median;
   let length = nums.length;
+
+  nums.sort((a, b) => a - b);
+
   if (length % 2 === 0) {
     median = average([nums[(length / 2) - 1], nums[length / 2]]);
   } else {
@@ -21,6 +18,8 @@ function median(nums) {
 
   return median;
 }
+
+
 
 // Tests
 

@@ -5,5 +5,46 @@
 
 // if (toUpperCase) {toLowerCase} & vice versa
 
-swapCase('CamelCase');              // "cAMELcASE"
-swapCase('Tonight on XYZ-TV');      // "tONIGHT ON xyz-tv"
+/* PEDAC
+input = string
+output = string
+
+.split('')
+
+for (i = 0; i < )
+
+if (char === char.toLowerCase) {
+  return char.toUpperCase
+} else {
+  return char.toLowerCase
+}
+
+*/
+
+function swapCase(string) {
+
+
+}
+
+console.log(swapCase('CamelCase'));              // "cAMELcASE"
+console.log(swapCase('Tonight on XYZ-TV'));      // "tONIGHT ON xyz-tv"
+
+
+
+
+/* First Attempt
+
+let letters = string.split('');
+
+for (i = 0; i < letters.length; i++) {
+  let letter = letters[i];
+
+  if (letter === letter.toLowerCase()) {
+    return letter.toUpperCase();
+  } else {
+    return letter.toLowerCase();
+  }
+}
+return letters.join('');
+}
+*/

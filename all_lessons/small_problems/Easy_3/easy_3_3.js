@@ -26,13 +26,19 @@
 //   return result;
 // };
 
-function string(size) {
-  let result = "";
-  for (let idx = 0; idx < size; idx++) {
-    
-  }
+function stringy(numberOfDigits) {
+  let finalString = [];
+  let one = 1;
+  let zero = 0;
 
-  return result;
+for (i = 0; i < numberOfDigits; i++) {
+  if (i % 2 === 0) {
+  finalString.push(one);
+  } else {
+    finalString.push(zero);
+  }
+}
+return String(finalString.join(''));
 }
 
 console.log(stringy(6));    // "101010"
@@ -41,16 +47,29 @@ console.log(stringy(4));    // "1010"
 console.log(stringy(7));    // "1010101"
 
 
-// let thingy.length = Number(integer);
-// string.length = integer;
+/*
 
-// if 0 < int print 1
-// if i < int print 01 ++
+2nd attempt
 
-// function def (int) {
+let result = "";
+  for (let idx = 0; idx < size; idx++) {
 
-//   for (let i = 0; i < int; i++) {
-// console.log(1);
-// console.log(0);
-//   }
-// }
+  }
+  return result;
+
+
+
+first attempt
+
+let thingy.length = Number(integer);
+ string.length = integer;
+
+ if 0 < int print 1
+ if i < int print 01 ++
+ function def (int) {
+
+  for (let i = 0; i < int; i++) {
+console.log(1);
+console.log(0);
+   }
+ } */

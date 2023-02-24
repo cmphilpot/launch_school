@@ -8,9 +8,21 @@
 // isPalindrome function you wrote in the
 // previous exercise.
 
-function isPalindrome(str) {
-  return str === str.split('').reverse().join('');
+
+
+function isRealPalindrome(str) {
+  let lowCase = str.toLowerCase();
+  let onlyAlph = lowCase.replaceAll(/[^a-z]/g, '');
+
+  return onlyAlph === onlyAlph.split('').reverse().join('');
 }
+
+/* REFACTORED:
+function isRealPalindrome(string) {
+  string = string.toLowerCase().replace(/[^a-z0-9]/g, '');
+  return isPalindrome(string)
+}
+*/
 
 console.log(isRealPalindrome('madam'));               // true
 console.log(isRealPalindrome('Madam'));               // true (case does not matter)

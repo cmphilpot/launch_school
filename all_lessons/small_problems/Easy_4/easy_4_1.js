@@ -7,15 +7,25 @@ let readlineSync = require('readline-sync');
 
 let numbers = [];
 
-console.log("Enter the  number:");
+console.log("Enter the 1st number:");
 numbers.push(Number(readlineSync.prompt()));
-console.log("Enter the  number:");
-console.log("Enter the  number:");
-console.log("Enter the  number:");
-console.log("Enter the  number:");
-console.log("Enter the  number:");
+console.log("Enter the 2nd number:");
+numbers.push(Number(readlineSync.prompt()));
+console.log("Enter the 3rd number:");
+numbers.push(Number(readlineSync.prompt()));
+console.log("Enter the 4th number:");
+numbers.push(Number(readlineSync.prompt()));
+console.log("Enter the 5th number:");
+numbers.push(Number(readlineSync.prompt()));
+console.log("Enter the last number:");
+let lastNum = Number(readlineSync.prompt());
 
-set last num to const then use includes!
+  if (numbers.includes(lastNum)) {
+    console.log(`The number ${lastNum} appears in ${numbers}.`);
+  } else {
+    console.log(`The number ${lastNum} does not appear in ${numbers}.`);
+  };
+
 
 
 

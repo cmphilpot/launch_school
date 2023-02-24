@@ -22,8 +22,10 @@ function targetRoll(characterValue) {
   switch (result) {
     case 1:
       automaticFail();
+      break;
     case 20:
       automaticSuccess();
+      break;
     default:
       void (result >= characterValue ? success() : fail());
   }
@@ -59,9 +61,9 @@ let myCharacter = {
 
 // Jenkins wants to break in a door with brute force,
 // so he has to roll against his strength value.
-targetRoll(myCharacter.strength);
+console.log(targetRoll(myCharacter.strength));
 
 // Jenkins found an ancient scroll and attempts to decipher it.
 // He has to roll against his education, in order to determine
 // whether he's able to read it.
-targetRoll(myCharacter.education);
+console.log(targetRoll(myCharacter.education));

@@ -7,7 +7,36 @@
 // than or equal to 0. The starting number can be any integer. If the count is 0, the
 // function should return an empty array.
 
-sequence(5, 1);          // [1, 2, 3, 4, 5]
-sequence(4, -7);         // [-7, -14, -21, -28]
-sequence(3, 0);          // [0, 0, 0]
-sequence(0, 1000000);    // []
+
+/* PEDAC
+
+*/
+
+function sequence(count, number) {
+
+  let result = [];
+
+  if (count < 1) {
+    return result;
+  }
+
+  for (let counter = 1; counter <= count; counter++) {
+    result.push(number * counter);
+  }
+
+  return result;
+}
+
+/* outsourced multiple generator?
+
+function isMultiple(number) {
+number += number
+}
+
+*/
+
+
+console.log(sequence(5, 1));          // [1, 2, 3, 4, 5]
+console.log(sequence(4, -7));         // [-7, -14, -21, -28]
+console.log(sequence(3, 0));          // [0, 0, 0]
+console.log(sequence(0, 1000000));    // []

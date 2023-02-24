@@ -148,3 +148,58 @@
 // console.log(swap('Oh what a wonderful day it is'));  // "hO thaw a londerfuw yad ti si"
 // console.log(swap('Abcde'));                          // "ebcdA"
 // console.log(swap('a'));                              // "a"
+
+// let obj = {
+//   b: 2,
+//   a: 1,
+//   c: 3
+// };
+
+// let objKeys = Object.keys(obj);
+// let upperKeys = objKeys.map((key) => key.toUpperCase());
+// console.log(upperKeys);
+
+
+// let groceryList = ['a', 'b', 'c', 'd', 'e'];
+
+// while (groceryList.length) {
+//   let checkedItem = groceryList.shift();
+//   console.log(checkedItem);
+// }
+
+// let flintstones = ["Fred", "Barney", "Wilma", "Betty"];
+// let flintstonesObj = {};
+
+// flintstones.forEach((name, index) => {
+//   flintstonesObj[name] = index;
+// });
+
+// console.log(flintstonesObj);
+
+// let ages = {
+//   Herman: 32,
+//   Lily: 30,
+//   Grandpa: 5843,
+//   Eddie: 10,
+//   Marilyn: 22,
+//   Spot: 237
+// };
+
+// let totalAges = 0;
+
+// Object.values(ages).forEach(age => totalAges += age);
+// console.log(totalAges);
+
+// console.log(Object.values(ages).reduce((agesSum, currAge) => agesSum + currAge, 0));
+
+let statement = "The Flintstones Rock!";
+
+let charsInStatement = statement.split('').filter(char => char !== ' ');
+let result = {};
+
+charsInStatement.forEach(char => {
+  result[char] = result[char] || 0;
+  result[char] += 1;
+ });
+
+ console.log(result);

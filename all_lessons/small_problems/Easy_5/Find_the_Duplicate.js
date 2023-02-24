@@ -11,9 +11,8 @@
 // find() method?
 
 function findDup(array) {
-
-
- }
+return array.filter((value, idx, array) => idx !== array.indexOf(value));
+}
 
 
 // Examples:
@@ -33,21 +32,54 @@ console.log(findDup([18,  9, 36, 96, 31, 19, 54, 75, 42, 15,
 
 
 
-          /// 2nd attempt
-          // let currentValue = 0;
-          // while (currentValue < array.length) {
-          //   currentValue++;
-          //   if (currentValue[x] === array[x]) {
-          //     return currentValue[x];
-          //   }
-          // }
+
+ /*
+
+5th attempt does boolean to find IF there is a repeat
+
+  let valuesSoFar = [];
+
+  for(let idx = 0; idx < array.length; idx++) {
+        let value = array[idx];
+        if (valuesSoFar.indexOf(value) !== -1) {
+                return true;
+        }
+        valuesSoFar.push(value);
+  }
+  return false;
 
 
-          // 3rd attempt
-          // let count = array.length;
-  // for (let iteratingValue = 0; iteratingValue < count; iteratingValue++) {
-  //   let previous = count[iteratingValue - 1];
-  //   let current = count[iteratingValue];
-  //   if (current === previous) {
-  //     return current;
-  //   }
+
+4th attempt:
+array.forEach(function(value){
+for(idx = 0; idx < array.length; idx++){
+        if(value === array[idx]){
+        console.log(array[idx])
+}
+        }
+        });
+
+
+
+
+2nd attempt
+let currentValue = 0;
+while (currentValue < array.length) {
+currentValue++;
+if (currentValue[x] === array[x]) {
+return currentValue[x];
+}
+}
+
+
+          3rd attempt
+          let count = array.length;
+  for (let iteratingValue = 0; iteratingValue < count; iteratingValue++) {
+    let previous = count[iteratingValue - 1];
+    let current = count[iteratingValue];
+    if (current === previous) {
+      return current;
+    }
+
+
+  */

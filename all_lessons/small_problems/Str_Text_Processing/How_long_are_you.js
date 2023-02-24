@@ -7,18 +7,57 @@
 // You may assume that every pair of words in the string
 // will be separated by a single space.
 
+/* PEDAC
 
-wordLengths('cow sheep chicken');
+input = string
+output = new array of strings of word elements + their length
+
+ wordsArray to input.split('')
+
+*/
+
+function wordLengths(string) {
+    if (arguments.length === 0 || string.length === 0) {
+    return [];
+  }
+
+  return
+//
+}
+
+
+
+console.log(wordLengths('cow sheep chicken'));
 // ["cow 3", "sheep 5", "chicken 7"]
 
-wordLengths('baseball hot dogs and apple pie');
+console.log(wordLengths('baseball hot dogs and apple pie'));
 // ["baseball 8", "hot 3", "dogs 4", "and 3", "apple 5", "pie 3"]
 
-wordLengths("It ain't easy, is it?");
+console.log(wordLengths("It ain't easy, is it?"));
 // ["It 2", "ain't 5", "easy, 5", "is 2", "it? 3"]
 
-wordLengths('Supercalifragilisticexpialidocious');
+console.log(wordLengths('Supercalifragilisticexpialidocious'));
 // ["Supercalifragilisticexpialidocious 34"]
 
-wordLengths('');      // []
-wordLengths();        // []
+console.log(wordLengths(''));      // []
+console.log(wordLengths());        // []
+
+
+
+
+/*  First idea
+
+let wordsArray = string.split(' ');
+return wordsArray.forEach(element => element = element.concat(element.length));
+
+function getLength(elementForMeasure) {
+return elementForMeasure.length;
+}
+
+ let i = 0;
+
+  while (i < wordsArray.length) {
+    return wordsArray[i];
+     i += 1;
+
+*/

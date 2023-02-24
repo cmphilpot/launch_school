@@ -10,8 +10,16 @@
 
 function sum(number) {
 
-}
+  let numStr = String(number);
 
+  let digits = numStr.split('');
+
+  for (idx = 0; idx < digits.length; idx++) {
+    digits[idx] = Number(digits[idx]);
+  }
+
+  return digits.reduce((acc, curr) => acc + curr, 0);
+}
 
 console.log(sum(23));           // 5
 console.log(sum(496));          // 19

@@ -8,6 +8,10 @@
 
 // You may not use javascript's Date class methods.
 
+/* PEDAC
+0 ++ distance from start midnight
+1439 -= distance from end midnight
+*/
 
 console.log(afterMidnight("00:00") === 0);
 console.log(beforeMidnight("00:00") === 0);

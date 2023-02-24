@@ -11,6 +11,13 @@
 // You may (and should) use the transactionsFor function from
 // the previous exercise.
 
+function transactionsFor(inventoryItem, transactions) {
+  return transactions.filter(inventory => inventory.id === inventoryItem );
+}
+
+function isItemAvailable(item, transactions) {
+
+}
 
 let transactions = [ { id: 101, movement: 'in',  quantity:  5 },
 { id: 105, movement: 'in',  quantity: 10 },
@@ -23,6 +30,6 @@ let transactions = [ { id: 101, movement: 'in',  quantity:  5 },
 { id: 102, movement: 'in',  quantity: 22 },
 { id: 103, movement: 'out', quantity: 15 }, ];
 
-isItemAvailable(101, transactions);     // false
-isItemAvailable(103, transactions);     // false
-isItemAvailable(105, transactions);     // true
+console.log(isItemAvailable(101, transactions));     // false
+console.log(isItemAvailable(103, transactions));     // false
+console.log(isItemAvailable(105, transactions));     // true

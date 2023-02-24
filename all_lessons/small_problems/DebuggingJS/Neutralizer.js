@@ -5,23 +5,42 @@
 
 
 function neutralize(sentence) {
+  const negativeWords = ["dull", "boring", "annoying", "chaotic"];
+
   let words = sentence.split(" ");
+  let cleanedSentence = [];
+  let dirtyWords = [];
 
-  words.forEach(word => {
-    if (isNegative(word)) {
-      const index = words.indexOf(word);
-      words.splice(index, 1);
+  for (idx = 0; idx < words.length; idx += 1) {
+    let value = words[idx];
+    if (negativeWords.includes(value)) {
+      value.replace('');
+    } else {
+      cleanedSentence.push(value);
     }
-  });
-  return words.join(" ");
-};
+  }
+  return cleanedSentence.join(" ");
 
-function isNegative(word) {
-  return ["dull", "boring", "annoying", "chaotic"].includes(word);
 }
+
+// function isNegative(word) {
+//   return ["dull", "boring", "annoying", "chaotic"].includes(word);
+// }
 
 console.log(
   neutralize("These dull boring cards are part of a chaotic board game.")
 );
-// Expected: These cards are part of a board game.
-// Actual: These boring cards are part of a board game.
+
+/* Expected: These cards are part of a board game.
+  Actual: These boring cards are part of a board game. */
+
+
+
+  //   words.forEach(word => {
+//     if (isNegative(word)) {
+//       const index = words.indexOf(word);
+//       words.splice(index, index - 1);
+//     }
+//   });
+//   return words.join(" ");
+// };

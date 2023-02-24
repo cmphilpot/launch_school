@@ -8,10 +8,25 @@
 // You may assume that the input String
 // will always contain at least two words.
 
+
 function penultimate(string) {
-wordsArray = string.split("" ");
-return wordsArray[ ];
+let words = string.split(' ');
+return words[words.length - 2];
+
 }
 
-console.log(penultimate("last word")); // logs true
+console.log(penultimate("last word") === "last"); // logs true
 console.log(penultimate("Launch School is great!") === "is"); // logs true
+
+
+/*
+
+
+
+
+
+
+wordsArray = string.split("" ");
+return wordsArray[ ];
+
+*/

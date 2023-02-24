@@ -5,8 +5,35 @@
 // return value; they just don't count when toggling the
 // desired case.
 
+// can use a default parameter OR
+// needUpper(true) / if (needUpper) needUpper = false (on-off dynamic)
+
+function staggeredCase(string) {
+
+}
+
+
 console.log(staggeredCase("I Love Launch School!") === "I lOvE lAuNcH sChOoL!");
 console.log(staggeredCase("ALL CAPS") === "AlL cApS");
 console.log(
   staggeredCase("ignore 77 the 444 numbers") === "IgNoRe 77 ThE 444 nUmBeRs"
 );
+
+
+
+
+/* First Attempt
+
+ return string
+    .split('')
+    .map((char, index) => {
+      if (char.match(/^[A-Za-z]+$)) {    //   cha.match(/[^a-z]/gi))
+        continue;
+      }
+      if (index % 2 === 0) {
+        return char.toUpperCase();
+      } else {
+        return char.toLowerCase();
+      }
+    })
+  .join("");

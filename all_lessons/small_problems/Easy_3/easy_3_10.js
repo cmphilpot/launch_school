@@ -9,7 +9,8 @@
 
 // let year = readline.question("Enter the year: ");
 
-function century (year) {
+function century(year) {
+
   let centuryNumber = Math.floor(year / 100) + 1;
   if (year % 100 === 0) {
     centuryNumber -= 1;
@@ -17,9 +18,23 @@ function century (year) {
   return String(centuryNumber) + centurySuffix(centuryNumber);
 }
 
-function cent
+function centurySuffix(centuryNumber) {
 
-// console.log(`The year ${year} is in the ${century} century.`)
+  // need brief function to address years that are turn of the century (2000)
+
+  let lastDigit = centuryNumber % 10;
+  switch (lastDigit) {
+  case 1: return 'st';
+  case 2: return 'nd';
+  case 3: return 'rd';
+  default: return 'th';
+  }
+
+}
+
+// function catchWithTh(lastTwo) {
+
+// }
 
 console.log(century(2000));        // "20th"
 console.log(century(2001));        // "21st"
@@ -30,3 +45,17 @@ console.log(century(10103));       // "102nd"
 console.log(century(1052));        // "11th"
 console.log(century(1127));        // "12th"
 console.log(century(11201));       // "113th"
+
+/* notes
+
+let centuryNumber = Math.floor(year / 100) + 1;
+  if (year % 100 === 0) {
+    centuryNumber -= 1;
+  }
+  return String(centuryNumber) + centurySuffix(centuryNumber);
+
+function cent
+
+// console.log(`The year ${year} is in the ${century} century.`)
+
+*/

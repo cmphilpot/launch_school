@@ -3,20 +3,20 @@
 // number of digits specified by the argument.
 // (The first Fibonacci number has an index of 1.)
 
-
 //each subsequent number is the sum of the two previous numbers
 
+/* PEDAC
+input = integer n
+output = indexOf first Fn that has # of digits specified by arg
+String(num).split('') gives array of digits .length determines # of digits
+
+
+
+*/
+
 function findFibonacciIndexByLength(length) {
-let first = ? ;
-let second = ?;
-let Count
-let Fibonacci
 
-do {
-  // what?
-} while ()
 
-return //what?
 }
 
 
@@ -29,3 +29,37 @@ findFibonacciIndexByLength(1000n) === 4782n;
 findFibonacciIndexByLength(10000n) === 47847n;
 
 // The last example may take a minute or so to run.
+
+
+/*
+
+let first = 1;
+let second = ?;
+let Count
+let Fibonacci
+
+do {
+  // what?
+} while ()
+
+return //what?
+
+
+*/
+
+
+
+/* let first = 1n;
+let second = 1n;
+let count = 2n;
+let fibonacci;
+
+do {
+  fibonacci = first + second;
+  count += 1n;
+  first = second;
+  second = fibonacci;
+} while (String(fibonacci).length < length);
+
+  return count;
+  */

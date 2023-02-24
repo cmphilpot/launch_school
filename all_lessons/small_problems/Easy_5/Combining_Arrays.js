@@ -20,7 +20,7 @@ while (idx2 < arr2.length) {
   idx2++;
   }
 
-console.log([...new Set(newArr)]);
+  return [...new Set(newArr)];
 }
 
 console.log(union([1, 3, 5], [3, 6, 9]));    // [1, 3, 5, 6, 9]

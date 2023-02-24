@@ -32,13 +32,44 @@
 //returns true if exactly one of its arguments is truthy,
 
 function xor(value1, value2) {
-  if x {
-    return true;
+if (!!value1 !== !!value2) {
+  return true;
   }
-  return false;
+return false;
 }
 
 console.log(xor(5, 0) === true);          // true
 console.log(xor(false, true) === true);   // true
 console.log(xor(1, 1) === false);         // true
 console.log(xor(true, true) === false);   // true
+
+
+/*
+5th attempt:
+if ((value1 !== value2) && (((value1 > 0) && (value2 == 0)) || ((value1 == 0) && (value2 > 0))));
+  return true;
+
+4th
+  if ((((value1 > 0) && (value2 !== value1)) || ((value2 > 0) && (value1 !== value2))) && (value1 !== value2)) {
+    return true
+
+3rd
+if (((value1 === true) && (value2 !== value1)) || ((value2 === true) && (value1 !== b))) {
+  return true
+
+2nd
+if (((value1 > 0) || (value2 > 0))) {
+  return true
+  }
+
+
+
+first attempt
+
+  if x {
+    return true;
+  }
+  return false;
+
+
+*/
